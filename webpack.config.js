@@ -3,10 +3,13 @@ var webpack = require('webpack');
 module.exports = {
     mode: "development",
     context: __dirname,
-    entry: "./app.jsx",
+    entry: {
+        index: "./app.jsx",
+        navbar: "./components/top-navbar.jsx"
+    },
     output: {
         path: __dirname + "/dist",
-        filename: "bundle.min.js"
+        filename: '[name].bundle.min.js'
     },
     watch: true,
     resolve: {
@@ -28,8 +31,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', 'css'],
             },
         ]
     },
-}
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        },
+    },
+};
