@@ -1,11 +1,12 @@
 var webpack = require('webpack');
-
+var package = require('./package.json');
 module.exports = {
     mode: "development",
     context: __dirname,
     entry: {
         index: "./app.jsx",
-        navbar: "./components/top-navbar.jsx"
+        navbar: "./components/top-navbar.jsx",
+        login: "./components/login/login.jsx"
     },
     output: {
         path: __dirname + "/dist",
