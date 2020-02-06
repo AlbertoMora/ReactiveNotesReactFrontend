@@ -4,7 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 export const Footer = (props) => {
     let notDecList = { listStyleType: "none", padding: 0 };
     return (
-        <footer className="footer w-sidebar" style={props.style? props.style:''}>
+        <footer className="footer w-sidebar" style={props.style? props.style:{}}>
             <Row>
                 <Col xs={12} md={4} className="text-align-center text-md-align-left">
                     <ul style={notDecList}>

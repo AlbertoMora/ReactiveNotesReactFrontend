@@ -3,7 +3,7 @@ import React from 'react';
 function SbHeader(props) {
     return (
         <div className="side-header">
-            <img src="resources/images/profile.jpg" alt="profile-picture"
+            <img src="/resources/images/profile.jpg" alt="profile-picture"
                 className={"profile-img " + (props.open ? "opened" : "closed")} />
             {
                 props.open ?
